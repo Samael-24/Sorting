@@ -40,3 +40,36 @@ const func = (arr1,arr2)=>{
 }
 console.log(func([9,9,9],[9,9,9]));
 
+const func2 = (l1, l2) => {
+    let i = 0, j = 0, carry = 0, result = [];
+    while (i < l1.length || j < l2.length) {
+        if (i < l1.length) {
+            carry += l1[i];
+            i++;
+            
+        }
+        if (j < l2.length) {
+            carry += l2[j];
+            j++;
+            
+        }
+        result.push(carry % 10);
+        
+        carry = Math.floor(carry / 10);
+        
+    }
+
+    if (carry) {
+        result.push(carry);
+
+    }
+    return result;
+}
+
+ const arr1 = [2, 5, 6]
+ const arr2 = [3, 6, 2]
+
+ console.log(func2(arr1, arr2));
+ console.log(func2([8,8,8], [8,8,8]));
+ console.log(888+888)
+
