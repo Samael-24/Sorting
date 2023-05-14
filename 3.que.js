@@ -23,11 +23,9 @@ const func = (arr1,arr2)=>{
             j++;
         }
 
-        // console.log(carry,"Before Pushing")
+        
         result.push(carry%10)
-        // console.log(carry%10)
-        // console.log(carry,"after Pushing")
-        // console.log(Math.floor(carry/10))
+        
         carry = Math.floor(carry/10);
         
     }
