@@ -12,9 +12,12 @@ const bubble = (data) => {
     for (let i = 0; i < data.length; i++) {
         for (let j = i + 1; j < data.length; j++) {
             if (data[i] > data[j]) {
-                let temp = data[i];
-                data[i] = data[j];
-                data[j] = temp
+                // let temp = data[i];
+                // data[i] = data[j];
+                // data[j] = temp
+
+                // Array Destructuring
+                [data[i], data[j]] = [data[j],data[i]]
             }
         }
     }
